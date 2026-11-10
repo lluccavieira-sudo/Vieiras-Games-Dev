@@ -1,0 +1,126 @@
+<div id="intro">
+  <div class="intro-box">
+    <div class="badge-top">VIEIRAS GAMES PRESENTA</div>
+    <h1>🎮 Vieiras Game Studio</h1>
+    <p>Comece na garagem, pesquise novas tecnologias, escolha engines famosas e conquiste o mercado mundial de games!</p>
+    <button id="btn-start" class="btn-primary">Assumir o Estúdio 🚀</button>
+  </div>
+</div>
+
+<div id="ev-modal" class="hidden">
+  <div class="ev-box">
+    <h2 id="ev-title">⚡ Evento no Estúdio</h2>
+    <p id="ev-desc"></p>
+    <div id="ev-btns" class="ev-actions"></div>
+  </div>
+</div>
+
+<div id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo-icon">🎮</span>
+      <div>
+        <div class="studio-name">Vieiras Game Studio</div>
+        <div class="hq-sub" id="h-hq">Garagem (Brasil)</div>
+      </div>
+    </div>
+    <div class="hud-pills">
+      <div class="pill gold">💰 R$ <span id="h-money">5.000</span></div>
+      <div class="pill cyan">🔬 <span id="h-rp">20</span> RP</div>
+      <div class="pill gem">💎 <span id="h-gems">5</span></div>
+      <div class="pill green">😊 <span id="h-hype">70</span>%</div>
+      <div class="pill">👥 <span id="h-fans">100</span></div>
+      <div class="pill">📅 Dia <span id="h-day">1</span></div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <button class="tab active" data-t="create">🕹️ Criar Jogo</button>
+    <button class="tab" data-t="research">🔬 Pesquisas</button>
+    <button class="tab" data-t="engines">⚙️ Engines</button>
+    <button class="tab" data-t="shop">🖥️ Estúdio</button>
+    <button class="tab" data-t="chap">📖 Capítulos</button>
+    <button class="tab" data-t="hq">🌍 Sedes</button>
+  </nav>
+
+  <main class="container">
+    <!-- TELA DEDICADA PARA CRIAR JOGO -->
+    <section id="t-create" class="sec">
+      <div class="panel-card highlight-border">
+        <div class="panel-header">
+          <h3>🚀 Estúdio de Criação de Jogos</h3>
+          <span class="badge">Slots Livres: <strong id="h-slots">0/1</strong></span>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>Nome do Projeto</label>
+            <input id="in-name" placeholder="Ex: Cosmic Polpitos 3D" />
+          </div>
+          <div class="field">
+            <label>Gênero (Desbloqueie mais em Pesquisas)</label>
+            <select id="in-genre"></select>
+          </div>
+          <div class="field">
+            <label>Engine do Jogo</label>
+            <select id="in-engine"></select>
+          </div>
+          <div class="field">
+            <label>Escopo / Tamanho</label>
+            <select id="in-scope">
+              <option value="1">Jogo Indie Curto (R$ 1.000)</option>
+              <option value="2">Jogo Médio / AA (R$ 3.500)</option>
+              <option value="3">Superprodução AAA (R$ 10.000)</option>
+            </select>
+          </div>
+        </div>
+        <button id="btn-create" class="btn-primary">Iniciar Desenvolvimento 🚀</button>
+      </div>
+
+      <h3 class="sec-title">⏳ Em Desenvolvimento</h3>
+      <div id="list-proj" class="grid"></div>
+
+      <h3 class="sec-title">🏆 Jogos Lançados (Renda Diária)</h3>
+      <div id="list-rel" class="grid"></div>
+    </section>
+
+    <!-- ABA PESQUISAS -->
+    <section id="t-research" class="sec hidden">
+      <div class="panel-header">
+        <h3 class="sec-title" style="margin:0;">🔬 Laboratório de Pesquisas (Pontos RP: <span id="r-rp" style="color:#38bdf8;">20</span>)</h3>
+        <span class="badge">Ganha +5 RP a cada jogo lançado e +2 RP por dia</span>
+      </div>
+      <div id="list-res" class="grid" style="margin-top:14px;"></div>
+    </section>
+
+    <!-- ABA ENGINES PARÓDIAS -->
+    <section id="t-engines" class="sec hidden">
+      <h3 class="sec-title">⚙️ Licenças de Engines Famosas</h3>
+      <div id="list-eng" class="grid"></div>
+    </section>
+
+    <!-- ABA ESTÚDIO -->
+    <section id="t-shop" class="sec hidden">
+      <h3 class="sec-title">🖥️ Equipamentos & Infraestrutura</h3>
+      <div id="list-shop" class="grid"></div>
+    </section>
+
+    <!-- ABA CAPÍTULOS -->
+    <section id="t-chap" class="sec hidden">
+      <div class="panel-card">
+        <span class="badge" id="c-badge">Capítulo 1 de 6</span>
+        <h2 id="c-title">1. A Garagem</h2>
+        <p id="c-text" class="chap-desc"></p>
+        <div class="goal-box">🎯 <strong>Meta:</strong> <span id="c-goal"></span></div>
+        <button id="btn-chap-ok" class="btn-success">Concluir Capítulo 🏆</button>
+      </div>
+    </section>
+
+    <!-- ABA SEDES -->
+    <section id="t-hq" class="sec hidden">
+      <h3 class="sec-title">🌍 Expansão Global</h3>
+      <div id="list-hq" class="grid"></div>
+    </section>
+  </main>
+
+  <div id="msg"></div>
+</div>
